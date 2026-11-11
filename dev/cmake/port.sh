@@ -1,4 +1,3 @@
-
 #!/bin/sh
 set -e
 
@@ -10,7 +9,7 @@ tar -xf cmake-4.4.5.tar.gz
 cd "$(tar -tf cmake-4.4.5.tar.gz | head -1 | cut -d/ -f1)"
 PORTS_DIR=${PORTS_DIR:-"/usr/ports"}
 
-./bootstrap \
+./bootstrap \k
     --prefix=/usr \
     --parallel="$(nproc)" \
     -- -DCMAKE_USE_OPENSSL=OFF
